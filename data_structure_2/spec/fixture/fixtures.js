@@ -5,7 +5,6 @@ function init_activity_database() {
     localStorage.activities = "{}";
 }
 
-
 function init_two_activity() {
     localStorage.activity_id_generator = 2;
     var activities = JSON.parse(localStorage.activities);
@@ -31,7 +30,6 @@ function init_two_activity() {
     localStorage.activities = JSON.stringify(activities);
     localStorage.activity_ids = JSON.stringify(activity_ids);
 }
-
 
 function init_biddings() {
     localStorage.biddings = {};

@@ -45,7 +45,6 @@ describe("Bids and Bidding Render", function() {
                     {
                         phone:"13600000000",
                         price: "10"
-
                     },
                     {
                         phone:"15600000000",
@@ -56,7 +55,6 @@ describe("Bids and Bidding Render", function() {
                         price: "10"
                     }
                 ]
-
             }
         ];
         localStorage.bids = JSON.stringify(bids);
@@ -84,6 +82,5 @@ describe("Bids and Bidding Render", function() {
         expect(biddings[0].phone).toBe("15600000000");
         expect(biddings[0].price).toBe("12");
     });
-
 
 });

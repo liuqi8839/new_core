@@ -1,12 +1,12 @@
 function init_activity_database() {
     localStorage.activity_id_generator = "0";
     localStorage.current_activity = "";
-    localStorage.actity_ids = [];
-    localStorage.activities = {};
+    localStorage.activity_ids = "[]";
+    localStorage.activities = "[]";
 
-    localStorage.sign_ups = [];
-    localStorage.bids = [];
-    localStorage.biddings = [];
+    localStorage.sign_ups = "[]";
+    localStorage.bids = "[]";
+    localStorage.biddings = "[]";
 }
 
 
@@ -22,6 +22,9 @@ function init_two_activity() {
         }
     ];
     localStorage.activities = JSON.stringify(activities);
+    var activity_ids = JSON.parse(localStorage.activity_ids);
+    activity_ids.push("0","1");
+    localStorage.activity_ids = JSON.stringify(activity_ids);
 }
 
 function init_sign_ups() {
@@ -58,4 +61,25 @@ function init_sign_ups() {
         }
     ];
     localStorage.sign_ups = JSON.stringify(sign_ups);
+}
+
+function init_bids() {
+    var bids = [
+        {
+            name: "竞价1",
+            activity_id:"1",
+            biddings:[]
+        },
+        {
+            name: "竞价1",
+            activity_id: "0",
+            biddings:[]
+        },
+        {
+            name: "竞价2",
+            activity_id:"1",
+            biddings:[]
+        }
+    ];
+    localStorage.bids = JSON.stringify(bids);
 }

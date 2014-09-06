@@ -22,6 +22,4 @@ describe("Bid", function() {
         expect(JSON.stringify(bids[0].biddings)).toBe("[]");
     });
 
-
-
 });

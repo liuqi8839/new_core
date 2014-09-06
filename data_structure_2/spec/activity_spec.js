@@ -1,8 +1,7 @@
 describe("Activity", function() {
 
-
     beforeEach(function() {
-        init_activity_database()
+        init_activity_database();
     });
 
     afterEach(function() {
@@ -22,7 +21,7 @@ describe("Activity", function() {
         expect(JSON.stringify(activities_json["0"].sign_ups)).toBe("[]");
         expect(JSON.stringify(activities_json["0"].bids)).toBe("[]");
         expect(JSON.stringify(activities_json["0"].biddings)).toBe("{}");
-        expect(localStorage.current_activity).toBe("0");
+        expect(localStorage.current_activity_id).toBe("0");
     });
 
     it("should activity id generator increase with creating activity", function() {
